@@ -1,0 +1,14 @@
+<section class="quote-row">
+    <div class="usa-grid">
+        <div class="usa-width-one-whole">
+            <div id="quote-container">
+                {% for quote in include.quotes %}
+                    <div class="quote {% if forloop.first==true %}active{% endif %}">
+                        <blockquote>{{quote.text}}”</blockquote>
+                        <cite>— {{quote.author}}</cite>
+                    </div>
+                {% endfor %}
+            </div> <!-- /.quote-container -->
+        </div> <!-- /.usa-width-one-whole -->
+    </div> <!-- /.usa-grid -->
+</section> <!-- /.quote-row -->
